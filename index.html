@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -325,7 +325,7 @@
               class="contact__input"
               placeholder="Message"
             ></textarea>
-            <input name="submit" type="submit" value="Send" class="contact__button button" />
+            <input id="bbb" onclick="buttonColor()" name="submit" type="submit" value="Send" class="contact__button button" />
           </form>
         </div>
       </section>
@@ -376,6 +376,11 @@
                 .then(response => alert("Thank you!"))
                 .catch(error => console.error('Error!', error.message))
             })
+
+            function buttonColor(){
+              document.getElementById("bbb").style.backgroundColor = 'hsl(224deg 56% 12%)';
+            }
+
           </script>
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
