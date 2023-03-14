@@ -51,11 +51,9 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  
 }
 
-
-body{
+body {
   background-image: url("assets/img/bg.png");
   background-attachment: fixed;
   background-position: center;
@@ -358,7 +356,6 @@ img {
   width: 85%;
 }
 
-
 /* ===== WORK =====*/
 .work__container {
   row-gap: 2rem;
@@ -555,7 +552,8 @@ img {
   padding: 1em 0 4em;
   max-width: 1000px;
   list-style: none;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Common style */
@@ -923,4 +921,94 @@ body #cda-remove {
   color: rgb(255, 30, 0);
 } */
 
+.card-container,
+.front,
+.back {
+  width: 20rem;
+  height: 20rem;
+}
+.card-container {
+  margin: 5rem;
+}
+.front,
+.back {
+  box-sizing: border-box;
+  padding: 2rem;
+  padding: 15px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+  font-size: 1.3rem;
+  color: #fff;
+  text-align: center;
+  font-family: var(--body-font);
+}
+/* front side bg is green gradient */
+.front {
+  background-image: linear-gradient(to right bottom, #2ecc71, #229955);
+}
+/* back side bg is orange gradient */
+.back {
+  background: var(--first-color);
+}
 
+.card-container {
+  position: relative;
+}
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: transform 0.8s ease;
+}
+.back {
+  transform: rotateY(180deg);
+}
+.card-container:hover .front {
+  transform: rotateY(-180deg);
+}
+.card-container:hover .back {
+  transform: rotateY(0deg);
+}
+
+.card-container {
+  perspective: 75rem;
+  margin: 20px auto;
+}
+
+.pro-img1 {
+  background-image: url(../img/blog.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pro-img2 {
+  background-image: url(../img/mon.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pro-img3 {
+  background-image: url(../img/p1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pro-img4 {
+  background-image: url(../img/p2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pro-img5 {
+  background-image: url(../img/dic.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pro-img6 {
+  background-image: url(../img/p4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.link{
+  text-decoration: none;
+  color: white;
+  
+}
